@@ -1,0 +1,94 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: sans-serif;
+    background: #fad0c4;
+    color: grey;
+}
+.image  img
+{
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    height: 30rem;
+    margin-bottom: 2rem;
+}
+.section-center 
+{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    min-height: 340px;
+    padding: 5rem 0;
+}
+.content h3{
+    margin: 1rem 0;
+}
+.section-center .tabs
+{
+    background-color: #ffe5e2;
+    border-radius: 0.5rem;
+    grid-template-rows: auto 1fr;
+}
+.btn-container 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+.btn-container button
+{
+    padding: 1rem 0;
+    border: none;
+    font-size: 1rem;
+    background-color: #b6c9f0;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    letter-spacing: 0.25rem;
+}
+.btn-container button:nth-child(1)
+{
+    border-top-left-radius: 0.5rem;
+}
+.btn-container button:nth-child(3)
+{
+    border-top-right-radius: 0.5rem;
+}
+.btn-container button:hover:not(.live)
+{
+    background: #ff9a9e;
+    color: white;
+}
+.tabs-content
+{
+    padding: 2rem 1.5rem;
+}
+
+@media (min-width:992px) {
+    .image{
+        margin-bottom: 0;
+    }
+    .section-center{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}
+
+.content
+{
+    display: none;
+}
+.content.live   /* if you want to show a particular tab so just add a class on that tab and the select in this way*/
+{
+    display: block;
+}
+.btn-container button.live
+{
+    background: #ffe5e2;
+}
